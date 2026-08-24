@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Testprojekt/Testprojekt.csproj" Id="488690ce-4965-40f4-8166-3dfaff552401" />
+  <Project Path="MitPongV1/MitPongV1.csproj" />
+</Solution>
