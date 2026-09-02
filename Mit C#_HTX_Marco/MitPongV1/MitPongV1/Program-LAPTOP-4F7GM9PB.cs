@@ -11,8 +11,8 @@ bool runGame;
 int score = 0;
 ConsoleKey prompt;
 ConsoleKey tast;
-int batY = 10;
-const int batHøjde = 3;
+int batY = 0;
+
 
 Console.BackgroundColor = ConsoleColor.Red;/*Denne linje farver highlightteksten rød*/
 Console.ForegroundColor = ConsoleColor.Black;
@@ -34,62 +34,28 @@ do
 
 runGame = prompt == ConsoleKey.Y;
 
+if (runGame == true) { Console.Clear();
+}
 if (runGame == true)
 {
-    Console.Clear();
-    Console.ForegroundColor = ConsoleColor.White;
-    for (int i = 3; i < 100; i++)
-    {
-        Console.SetCursorPosition(9 + i, 2);
-        Console.Write("_");
-        Console.SetCursorPosition(9 + i, 25);
-        Console.Write("_");
-    }
-    for (int i = 0; i < 25; i++)
-    {
-        Console.SetCursorPosition(10, 2 + i);
-        Console.Write("|");
-        Console.SetCursorPosition(109, 2 + i);
-        Console.Write("|");
-    }
     do
     {
         tast = Console.ReadKey(true).Key;
         switch (tast)
         {
-            case ConsoleKey.DownArrow:
-                if (batY < 26-batHøjde) { batY++; }
-                ;
-                break;
             case ConsoleKey.UpArrow:
-                if (batY > 3) { batY--; }
+                batY++;
+                Console.WriteLine(batY); ;
+                break;
+            case ConsoleKey.DownArrow:
+                batY--;
+                Console.WriteLine(batY);
                 break;
             case ConsoleKey.Escape:
                 runGame = false;
                 break;
         }
-        for (int i = 0; i < batHøjde; i++)
-        {
-            Console.SetCursorPosition(13, batY + i);
-            Console.Write("█");
-        }
-        if (batY < 23)
-        {
-            Console.SetCursorPosition(13, batY + batHøjde);
-            Console.Write(" ");
-        }
-        if (batY == 25-batHøjde)
-        {
-            Console.SetCursorPosition(13, 25);
-            Console.Write("_");
-        }
-        if (batY > 3)
-        {
-            Console.SetCursorPosition(13, batY - 1);
-            Console.Write(" ");
-        }
-        Console.SetCursorPosition(111, 27);
-        Console.WriteLine(batY);
+
     } while (runGame == true);
 }
 if (runGame == false)
