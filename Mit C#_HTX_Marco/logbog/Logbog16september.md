@@ -1,0 +1,2 @@
+Begyndt på at prøve at tilføje en funktion hvor man kan rotere sit bat. Rotationen virker. Det ser fint ud, men mangler bare
+at få bolden til at bevæge sig en retning baseret på ens bats rotation. Tænker lidt over kollisionen med battet mens det er roteret.
