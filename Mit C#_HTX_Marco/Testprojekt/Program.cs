@@ -1,2 +1,0 @@
-﻿Console.Write("test");
-
