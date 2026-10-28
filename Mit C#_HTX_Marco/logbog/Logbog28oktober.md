@@ -1,0 +1,1 @@
+Har forbedret start menuen meget, samme funktion som pausemenuen, og nu med en flot 'PONG' ascii titel.
