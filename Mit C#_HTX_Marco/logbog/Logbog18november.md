@@ -1,0 +1,2 @@
+Har lavet en ny knap i pausemenuen, der starter spillet forfra ved at sætte scorene til 0, og starte bolden et tilfældigt sted.
+Har også forbedret starten hvor man skriver sit navn, ved at lave et felt til det.
